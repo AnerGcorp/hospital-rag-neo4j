@@ -10,8 +10,8 @@ from langchain.prompts import (
 from langchain.schema.runnable import RunnablePassthrough
 from langchain_community.vectorstores import Chroma
 from langchain_core.output_parsers import StrOutputParser
-from langchain_intro.tools import get_current_wait_time
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
+from langchain_intro.tools import get_current_wait_time
 
 REVIEWS_CHROMA_PATH = "chroma_data/"
 

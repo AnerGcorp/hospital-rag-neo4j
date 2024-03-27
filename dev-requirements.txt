@@ -3,4 +3,5 @@ openai==1.7.2
 langchain-openai==0.0.2 
 langchain-community==0.0.12 
 langchainhub==0.1.14
+chromadb==0.4.22
 python-dotenv

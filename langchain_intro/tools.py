@@ -2,7 +2,7 @@ import random
 import time
 
 
-def get_current_wait_time(hospital: str) -> int | str:
+def get_current_wait_time(hospital: str):
     """Dummy function to generate fake wait times"""
 
     if hospital not in ["A", "B", "C", "D"]:
