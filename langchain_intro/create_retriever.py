@@ -3,7 +3,7 @@ from langchain_community.vectorstores.chroma import Chroma
 from langchain_openai import OpenAIEmbeddings
 import dotenv
 
-REVIEWS_CSV_PATH = 'data/reviews.csv'
+REVIEWS_CSV_PATH = '../data/reviews.csv'
 REVIEWS_CHROMA_PATH = 'chroma_data'
 
 dotenv.load_dotenv()
@@ -21,3 +21,8 @@ reviews_vector_db = Chroma.from_documents(
     persist_directory=REVIEWS_CHROMA_PATH
 )
 
+question = """Has anyone complained about communication with the hospital staff?"""
+
+relevant_docs = reviews_vector_db.similarity_search(question)
+
+print(relevant_docs)
