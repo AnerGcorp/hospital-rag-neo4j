@@ -7,6 +7,7 @@ from langchain.prompts import (
     PromptTemplate
 )
 from langchain.schema.messages import HumanMessage, SystemMessage
+from langchain_core.output_parsers import StrOutputParser
 import dotenv
 
 dotenv.load_dotenv()
@@ -45,10 +46,13 @@ review_prompt_template = ChatPromptTemplate(
     messages=messages
 )
 
-review_chain = review_prompt_template | chat_model
+output_parser = StrOutputParser()
+
+review_chain = review_prompt_template | chat_model | output_parser
 
 context = "I had a great stay!"
 question = "What is blood pressure?"
+
 
 review_chain.invoke({"context": context, "question": question})
 
