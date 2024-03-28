@@ -25,4 +25,4 @@ question = """Has anyone complained about communication with the hospital staff?
 
 relevant_docs = reviews_vector_db.similarity_search(question)
 
-print(relevant_docs)
+# print(relevant_docs)
