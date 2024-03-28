@@ -4,4 +4,5 @@ langchain-openai==0.0.2
 langchain-community==0.0.12 
 langchainhub==0.1.14
 chromadb==0.4.22
+polars
 python-dotenv
