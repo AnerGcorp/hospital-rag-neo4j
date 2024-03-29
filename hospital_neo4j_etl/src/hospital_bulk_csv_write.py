@@ -1,4 +1,3 @@
-Explain
 import os
 import logging
 from retry import retry
@@ -55,3 +54,6 @@ def load_hospital_graph_from_csv() -> None:
                             state_name: hospitals.hospital_state}});
         """
         _ = session.run(query, {})
+
+if __name__ == "__main__":
+    load_hospital_graph_from_csv()
