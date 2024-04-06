@@ -6,3 +6,4 @@ langchainhub==0.1.14
 chromadb==0.4.22
 polars
 python-dotenv
+numpy
