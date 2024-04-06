@@ -65,3 +65,21 @@ tools = [
         """,
     ),
 ]
+
+chat_model = ChatOpenAI(
+    model=HOSPITAL_AGENT_MODEL,
+    temperature=0,
+)
+
+hospital_rag_agent = create_openai_functions_agent(
+    llm=chat_model,
+    prompt=hospital_agent_prompt,
+    tools=tools,
+)
+
+hospital_rag_agent_executor = AgentExecutor(
+    agent=hospital_rag_agent,
+    tools=tools,
+    return_intermediate_steps=True,
+    verbose=True,
+)
