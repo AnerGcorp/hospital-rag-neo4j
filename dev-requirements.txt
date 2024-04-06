@@ -7,3 +7,4 @@ chromadb==0.4.22
 polars
 python-dotenv
 numpy
+asyncio
