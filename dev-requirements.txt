@@ -8,3 +8,4 @@ polars
 python-dotenv
 numpy
 asyncio
+fastapi
