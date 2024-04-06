@@ -43,3 +43,17 @@ def get_current_wait_times(hospital: str) -> str:
         return f"{hours} hours {minutes} minutes"
     else:
         return f"{minutes} minutes"
+    
+def get_most_available_hospital(_: Any) -> dict[str, float]:
+    """Find the hospital with the shortest wait time."""
+    current_hospitals = _get_current_hospitals()
+
+    current_wait_times = [
+        _get_current_wait_time_minutes(hospital_name) for hospital_name in current_hospitals
+    ]
+
+    best_time_idx = np.argmin(current_wait_times)
+    best_hospital = current_hospitals[best_time_idx]
+    best_wait_time = current_wait_times[best_time_idx]
+
+    return {best_hospital: best_wait_time}
