@@ -101,3 +101,6 @@ The question is:
 {question}
 """
 
+cypher_generation_prompt = PromptTemplate(
+    input_variables=["schema", "question"], template=cypher_generation_template
+)
