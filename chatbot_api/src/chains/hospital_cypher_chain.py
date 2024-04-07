@@ -143,7 +143,7 @@ qa_generation_prompt = PromptTemplate(
     input_variables=["context", "question"], template=qa_generation_template
 )
 
-ospital_cypher_chain = GraphCypherQAChain.from_llm(
+hospital_cypher_chain = GraphCypherQAChain.from_llm(
     cypher_llm=ChatOpenAI(model=HOSPITAL_CYPHER_MODEL, temperature=0),
     qa_llm=ChatOpenAI(model=HOSPITAL_QA_MODEL, temperature=0),
     graph=graph,
