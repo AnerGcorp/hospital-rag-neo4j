@@ -9,3 +9,5 @@ python-dotenv
 numpy
 asyncio
 fastapi
+requests
+httpx
